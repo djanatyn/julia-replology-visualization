@@ -1,0 +1,7 @@
+name = "RepologyVisualization"
+uuid = "473d7d32-3251-4392-95ec-f972ac04a265"
+authors = ["Jonathan Strickland <djanatyn@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
