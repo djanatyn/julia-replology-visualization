@@ -1,7 +1,6 @@
 module RepologyVisualization
 
 using JSON
-using Logging
 using Test
 
 struct PackageList
@@ -22,6 +21,9 @@ download_page()::PackageList =
     PackageList(JSON.parse(read(`curl $(api_url())`, String)))
 download_page(start::String)::Dict{String, Any} =
     PackageList(JSON.parse(read(`curl $(api_url(start))`, String)))
+
+next_page(packages::PackageList)::String =
+   sort(collect(keys(packages.page)))[end]
 
 @testset "generate urls" begin
     @test api_url() == "https://repology.org/api/v1/projects/?repos=5-&newest=True"
