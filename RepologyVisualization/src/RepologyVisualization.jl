@@ -25,7 +25,10 @@ last_page(start, packages) =
     next_page(packages) == start
 
 find_licenses(page) = unique(reduce(vcat, [
-    [Dict(:package => package, :license => definition["licenses"])
+    [Dict(:package => package,
+          # :version => definition["version"],
+          :repo => definition["repo"],
+          :license => definition["licenses"])
      for definition in repos if haskey(definition, "licenses")]
     for (package, repos) in page]))
 
