@@ -4,7 +4,7 @@ using JSON
 using Test
 using DataFrames
 
-packages() = PackageList(JSON.parse(open("packages.json")))
+packages() = JSON.parse(open("packages.json"))
 
 base_api_url = "https://repology.org/api/v1"
 
