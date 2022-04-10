@@ -4,5 +4,5 @@ authors = ["Jonathan Strickland <djanatyn@gmail.com>"]
 version = "0.1.0"
 
 [deps]
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
-TypedTables = "9d95f2ec-7b3d-5a63-8d20-e2491e220bb9"

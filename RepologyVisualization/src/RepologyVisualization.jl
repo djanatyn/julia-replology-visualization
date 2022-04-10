@@ -2,6 +2,7 @@ module RepologyVisualization
 
 using JSON
 using Test
+using DataFrames
 
 packages() = PackageList(JSON.parse(open("packages.json")))
 
